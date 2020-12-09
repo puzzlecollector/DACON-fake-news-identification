@@ -4,6 +4,7 @@
 
 ### Description 
 Given a data of the news, we classify if the news contains real or fake information. 
+The label 1 denotes fake news, and the label 0 denotes real news. 
 
 ### Exploratory Data Analysis 
 [Refer to this notebook](). We look at the provided data frames and try to do some preliminary analysis between the features. 
