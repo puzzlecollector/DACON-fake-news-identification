@@ -18,3 +18,6 @@ The label 1 denotes fake news, and the label 0 denotes real news.
 
 [Training a Bidirectional LSTM model with title and content inputs](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/fintech_nlp.ipynb) 
 - We used title and content informations because we believed that these two information are crucial in detecting whether the news is fake or not. Each of the two inputs are passed through an embedding and a bidirectional LSTM layer, and later they are concatenated. This does better than the rule based model above and scores an accuracy of 98.1% on the pulic leaderboard. 
+
+[Bidirectional LSTM model with 5 fold ensemble](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/bidirectional_5_fold.ipynb) 
+- Exactly the same as the above model, but did 5-fold cross validation, and used the models validated on each of the 5 folds for simple average ensembling. We witnessed a small improvement in accuracy: scored a 98.29% on the public leaderboard.   
