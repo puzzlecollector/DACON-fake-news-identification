@@ -21,3 +21,8 @@ The label 1 denotes fake news, and the label 0 denotes real news.
 
 [Bidirectional LSTM model with 5 fold ensemble](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/bidirectional_5_fold.ipynb) 
 - Exactly the same as the above model, but did 5-fold cross validation, and used the models validated on each of the 5 folds for simple average ensembling. We witnessed a small improvement in accuracy: scored a 98.29% on the public leaderboard.   
+
+### Other Machine Learning Models 
+[Multinomial Naive Bayes, Passive Aggressive Classifier, Linear Support Vector Classifier](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/ML%20methods.ipynb) 
+- Tried some of the classical ML classifiers and noticed that Linear SVC performs the best. The data used was a concatenation of title and content. Since Linear SVC performed the best, we used the predictions from a trained SVC and ensembled it with the results from the bidirectional LSTM models.  
+
