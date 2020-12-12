@@ -7,7 +7,7 @@ Given a data of the news, we classify if the news contains real or fake informat
 The label 1 denotes fake news, and the label 0 denotes real news. 
 
 ### Exploratory Data Analysis 
-[Refer to this notebook](). We look at the provided data frames and try to do some preliminary analysis between the features. 
+[Refer to this notebook](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/Exploratory%20Data%20Analysis.ipynb). We look at the provided data frames and try to do some preliminary analysis between the features. 
 
 ### Rule Based Model 
 [Simple rule based submission without any machine learning](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/Rule%20Based%20Model.ipynb). Scores an accuracy of 95.6% on the public leaderboard. This is the benchmark score that (whatever ML model we use) should surpass.If the content in the test data also exists in the train data, assume that this news is fake, otherwise assume that it is not fake.  
