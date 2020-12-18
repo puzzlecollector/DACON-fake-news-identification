@@ -17,12 +17,14 @@ The label 1 denotes fake news, and the label 0 denotes real news.
 - konlpy's Mecab library was used for morpheme analysis, and after that keras's tokenizer was used to convert the tokens into one-hot vectors. The tokenized sequences were padded. This was done for both the train and test data. For the notebook refer to the blocks below the cell listed as "Data Preprocessing" to look at how the data was preprocessed. Anything that comes before "Data Preprocessing" are simply rough data analysis that I have done.  
 
 [Training a Bidirectional LSTM model with title and content inputs](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/fintech_nlp.ipynb) 
-- We used title and content informations because we believed that these two information are crucial in detecting whether the news is fake or not. Each of the two inputs are passed through an embedding and a bidirectional LSTM layer, and later they are concatenated. This does better than the rule based model above and scores an accuracy of 98.1% on the pulic leaderboard. 
+- We used title and content informations because we believed that these two information are crucial in detecting whether the news is fake or not. Each of the two inputs are passed through an embedding and a bidirectional LSTM layer, and later they are concatenated. This does better than the rule based model above and scores an accuracy of 98.11% on the pulic leaderboard. 
 
 [Bidirectional LSTM model with 5 fold ensemble](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/bidirectional_5_fold.ipynb) 
 - Exactly the same as the above model, but did 5-fold cross validation, and used the models validated on each of the 5 folds for simple average ensembling. We witnessed a small improvement in accuracy: scored a 98.29% on the public leaderboard.   
 
-### Other Machine Learning Models 
+### Classical Machine Learning Approaches  
 [Multinomial Naive Bayes, Passive Aggressive Classifier, Linear Support Vector Classifier](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/ML%20methods.ipynb) 
-- Tried some of the classical ML classifiers and noticed that Linear SVC performs the best. The data used was a concatenation of title and content. Since Linear SVC performed the best, we used the predictions from a trained SVC and ensembled it with the results from the bidirectional LSTM models.  
+- Tried some of the classical ML classifiers and noticed that Linear SVC performs the best. The data used was a concatenation of title and content. Since Linear SVC performed the best, we used the predictions from a trained SVC and ensembled it with the results from the bidirectional LSTM models. An ensemble of bidirectional LSTM with linear SVC managed to improve the score to 98.32% on the public leaderboard.   
 
+[light GBM with 63 features](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/LGBM_63_features.ipynb)
+- Added various meta features (like the length of the text, whether the text starts with a particular punctuation, number of unique tokens etc) and text based feature (TF-IDF 1-3 ngram feature with singular value decomposition applied). Uses 63 features in total and scores 98.53% on the public leaderboard. 
