@@ -37,3 +37,7 @@ The label 1 denotes fake news, and the label 0 denotes real news.
 
 [XGBoost with 63 features](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/xgboost.ipynb)
 - Used the same data used to train the light gbm above. Did not submit it on the leaderboard but judging from the validation loss we expect it to perform similarly to the Light GBM with 63 features. 
+
+### Ensemble Methods 
+[Ensemble of XGBoost with 63 features, LightGBM with 63 features, bidirectional LSTM, linear SVC](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/probability%20ensembles.ipynb)  
+- A quick average ensemble (not weighted) of the four aforementioned models. Managed to record a leaderboard score of 98.881%. Perhaps a stacking ensemble method or a weighted average ensemble method may improve the result a bit more. 
