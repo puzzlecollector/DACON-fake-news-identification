@@ -26,7 +26,7 @@ The label 1 denotes fake news, and the label 0 denotes real news.
 [Multinomial Naive Bayes, Passive Aggressive Classifier, Linear Support Vector Classifier](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/ML%20methods.ipynb) 
 - Tried some of the classical ML classifiers and noticed that Linear SVC performs the best. The data used was a concatenation of title and content. Since Linear SVC performed the best, we used the predictions from a trained SVC and ensembled it with the results from the bidirectional LSTM models. An ensemble of bidirectional LSTM with linear SVC managed to improve the score to 98.32% on the public leaderboard.   
 
-[light GBM with 63 features](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/LGBM_63_features.ipynb)
+[Light GBM with 63 features](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/LGBM_63_features.ipynb)
 - Added various meta features (like the length of the text, whether the text starts with a particular punctuation, number of unique tokens etc) and text based feature (TF-IDF 1-3 ngram feature with singular value decomposition applied). Uses 63 features in total and scores 98.53% on the public leaderboard. 
 
 [pycaret naive soft blending](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/pycaret_naive_softblending.ipynb) 
@@ -34,3 +34,6 @@ The label 1 denotes fake news, and the label 0 denotes real news.
 
 [light GBM with 71 features](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/lightgbm%20more%20features.ipynb)
 - Used 71 features (more features on top) with Light GBM but performance worsened to 98.16%. This suggests that it is better to use the dataframe with 63 features.  
+
+[XGBoost with 63 features](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/xgboost.ipynb)
+- Used the same data used to train the light gbm above. Did not submit it on the leaderboard but judging from the validation loss we expect it to perform similarly to the Light GBM with 63 features. 
