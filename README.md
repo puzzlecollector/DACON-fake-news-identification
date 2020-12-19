@@ -31,3 +31,6 @@ The label 1 denotes fake news, and the label 0 denotes real news.
 
 [pycaret naive soft blending](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/pycaret_naive_softblending.ipynb) 
 - Used 63 features (same data as the light GBM above) and naively selected the best seven models from pycaret's compare_models(). After that a soft voting of these seven models were carried out. Recorded an accuracy of 98.31% on the public leaderboard. 
+
+[light GBM with 71 features](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/lightgbm%20more%20features.ipynb)
+- Used 71 features (more features on top) with Light GBM but performance worsened to 98.16%. 
