@@ -40,4 +40,8 @@ The label 1 denotes fake news, and the label 0 denotes real news.
 
 ### Ensemble Methods 
 [Ensemble of XGBoost with 63 features, LightGBM with 63 features, bidirectional LSTM, linear SVC](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/probability%20ensembles.ipynb)  
-- A quick average ensemble (not weighted) of the four aforementioned models. Managed to record a leaderboard score of 98.881%. Perhaps a stacking ensemble method or a weighted average ensemble method may improve the result a bit more. 
+- A quick average ensemble (not weighted) of the four aforementioned models. Managed to record a leaderboard score of 98.881%. Perhaps a stacking ensemble method or a weighted average ensemble method may improve the result a bit more.  
+
+### Data Pre-processing notebooks 
+[Example of creating dataframe for Light GBM, XGBoost, etc](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/dataframe_no_data_leak.ipynb) 
+- This version of dataframe creation does not have a data leakage problem (does not extract text information from the test data). 
