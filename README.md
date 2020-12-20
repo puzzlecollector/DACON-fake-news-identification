@@ -38,6 +38,12 @@ The label 1 denotes fake news, and the label 0 denotes real news.
 [XGBoost with 63 features](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/xgboost.ipynb)
 - Used the same data used to train the light gbm above. Did not submit it on the leaderboard but judging from the validation loss we expect it to perform similarly to the Light GBM with 63 features. 
 
+[CatBoost with 63 features](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/catboost_63_features.ipynb) 
+- Did not submit on the leaderboard, but judging from the validation loss, we expect it to perform similarly to the light GBM with 63 features. 
+
+[CatBoost with 63 features + text features](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/catboost_full.ipynb) 
+- Scores 99.01% on the public leaderboard. Uses the fact that categorical boost can also take in text features. So ran catboost with text features + 63 features we have been using before for other gradient boosted tree models. 
+
 ### Ensemble Methods 
 [Ensemble of XGBoost with 63 features, LightGBM with 63 features, bidirectional LSTM, linear SVC](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/probability%20ensembles.ipynb)  
 - A quick average ensemble (not weighted) of the four aforementioned models. Managed to record a leaderboard score of 98.881%. Perhaps a stacking ensemble method or a weighted average ensemble method may improve the result a bit more.  
