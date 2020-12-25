@@ -48,6 +48,12 @@ The label 1 denotes fake news, and the label 0 denotes real news.
 - Scores 99.21% on the public leaderboard. Added an additional feature related to the 'ord' feature, and used 10 fold ensemble instead of 5 fold ensemble. 
 
 
+### Transformer Models 
+
+[Multilingual BERT with only text features](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/multilingual%20bert.ipynb)
+- Multilingual BERT with weights provided by Google. Training using pytorch. Records a public leaderboard score of 98.5%. With a 10 fold ensemble method, it could possibly reach 99%.  
+
+
 ### Ensemble Methods 
 [Ensemble of XGBoost with 63 features, LightGBM with 63 features, bidirectional LSTM, linear SVC](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/probability%20ensembles.ipynb)  
 - A quick average ensemble (not weighted) of the four aforementioned models. Managed to record a leaderboard score of 98.881%. Perhaps a stacking ensemble method or a weighted average ensemble method may improve the result a bit more.  
