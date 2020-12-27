@@ -51,7 +51,10 @@ The label 1 denotes fake news, and the label 0 denotes real news.
 ### Transformer Models 
 
 [Multilingual BERT with text features](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/multilingual%20bert.ipynb)
-- Multilingual BERT with weights provided by Google. Trained using pytorch. Used the pretrained multilingual BERT Tokenizer. Records a public leaderboard score of 98.5%. With a 10 fold ensemble method, it could possibly reach 99%.  
+- Multilingual BERT with weights provided by Google. Trained using pytorch. Used the pretrained multilingual BERT Tokenizer. Records a public leaderboard score of 98.5%. With a 10 fold ensemble method, it could possibly reach 99%.   
+
+[HanBERT with text features](https://github.com/puzzlecollector/DACON-fake-news-identification/blob/main/hanbert.ipynb) 
+- HanBERT with weights provided by github user monlogg. Fine tuned using title+content data. 
 
 
 ### Ensemble Methods 
